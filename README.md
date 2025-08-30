@@ -19,7 +19,7 @@ ADF-->ADB;
     
     C-->D;
 ```
-
+```mermaid
 graph TD
     A[Enter Chart Definition] --> B(Preview)
     B --> C{decide}
@@ -28,6 +28,7 @@ graph TD
     E --> B
     D --> F[Save Image and Code]
     F --> B
+```
 
 
 ## Explanation of architecture and azure infra and the azure services connectivity
