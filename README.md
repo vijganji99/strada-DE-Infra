@@ -32,9 +32,9 @@ graph TD
 
 ```mermaid
 stateDiagram-v2
-    [*] --> select_date
-    select_date --> select_time
-    select_time --> current_status
+    [*] --> SQL_Server
+    SQL_Server --> ADF
+    ADF --> Linked_Service: ADB[Managed Identity]
     current_status --> cancel: status_available
     current_status --> [*]: status_over
     cancel --> [*]
