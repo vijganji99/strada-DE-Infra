@@ -2,6 +2,8 @@
  # Azure Platform Side set up for STRADA team (using Azure Terraform)
 
     	a. Creation of VNET & Subnets for Azure data Factory, Azure Data Bricks , Storage Account
+      1. We can create Network security groups and Private Endpoints for security of the data and who can access the data. We can also use Private DNS Zone. As this security resources use private network instead of over the Internet, we are much secure over the Microsoft back bone network.
+
     	b. Creation of Resource Group to host ADF, ADB, Storage Account for Data Lake, Azure Key vault
    		c. Creation of ADF
    		d. Creation of Storage account with Hirearchial Namespace = true (which is a important setting to use Data Lake for Azure Data Bricks)
