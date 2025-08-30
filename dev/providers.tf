@@ -11,9 +11,9 @@ terraform {
 # Provider to work with the Data Eng'g subscription
 
 provider "azurerm" { 
-  alias = "<Subscription_Name>"
+  alias = "<dev Subscription_Name>"
   tenant_id = "<tenant_ID>"
-  subscription_id = "<Subscription_ID>"
+  subscription_id = "<dev_Subscription_ID>"
   features {
     resource_group {
       prevent_deletion_if_contains_resources = true
