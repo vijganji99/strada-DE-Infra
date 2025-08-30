@@ -11,30 +11,13 @@
 
 # strada-DE-Infra
 For STRADA team Azure Infra set up via Automation using Azure Terraform
-```mermaid
-graph TD;
-    SQLSERVER-->ADF;
-ADF-->ADB;
-    ADB-->ASADL;
-    
-    C-->D;
-```
-```mermaid
-graph TD
-    A[Enter Chart Definition] --> B(Preview)
-    B --> C{decide}
-    C --> D[Keep]
-    C --> E[Edit Definition]
-    E --> B
-    D --> F[Save Image and Code]
-    F --> B
-```
+
 
 ```mermaid
 stateDiagram-v2
     [*] --> SQL_Server
     SQL_Server --> ADF
-    ADF[Managed Identity] --> ADB:Linked_Service
+    ADF[Managed_Identity] --> ADB:Linked_Service
     current_status --> cancel: status_available
     current_status --> [*]: status_over
     cancel --> [*]
