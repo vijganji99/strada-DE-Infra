@@ -1,4 +1,4 @@
-# NOTE: I did not use LLM , as I did work on a similar request rcently for our Infrastructure at current Org, so basically have some idea over this question .
+### NOTE: I am not a full time Data Engineer . I did not use LLM , as I did work on a similar request rcently for our Infrastructure at current Org, so basically have some idea over this question .
  # Azure Platform Side set up for STRADA team (using Azure Terraform)
 
     	a. Creation of VNET & Subnets for Azure data Factory, Azure Data Bricks , Storage Account
@@ -7,11 +7,14 @@
    		d. Creation of Storage account with Hirearchial Namespace = true (which is a important setting to use Data Lake for Azure Data Bricks)
    		e. Creation of Azure Data Bricks Service (uses 2 subnets for Public and Private exposure of ADB)
    		d. Creation of Azure Key vault to store On-Prem SQL Server (login and password) .
-
-
-
 # strada-DE-Infra
 For STRADA team Azure Infra set up via Automation using Azure Terraform
+
+# Connectivity
+1. SQL Server ( Source for the data)
+2. Azure Data Factory (Data Ingesion from SQL Server)
+3. Azure Data Lake & Azure Data Bricks (For Preparing the data and Transforming the data for final loading & reporting)
+
 
 
 ```mermaid
