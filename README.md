@@ -8,3 +8,5 @@ ADF-->ADB;
     
     C-->D;
 ```
+
+## Explanation of architecture and azure infra and the azure services connectivity
