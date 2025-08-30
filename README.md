@@ -1,4 +1,4 @@
-# Azure Platform Side set up for STRADA team (using Azure Terraform)
+ # Azure Platform Side set up for STRADA team (using Azure Terraform)
 1. First step will be set up of Virtual Network
     a. Creation of VNET & Subnets for Azure data Factory, Azure Data Bricks , Storage Account
     b. Creation of Resource Group
@@ -34,7 +34,7 @@ graph TD
 stateDiagram-v2
     [*] --> SQL_Server
     SQL_Server --> ADF
-    ADF --> Linked_Service: ADB[Managed Identity]
+    ADF[Managed Identity] --> ADB:Linked_Service
     current_status --> cancel: status_available
     current_status --> [*]: status_over
     cancel --> [*]
