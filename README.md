@@ -16,9 +16,10 @@ For STRADA team Azure Infra set up via Automation using Azure Terraform
 ```mermaid
 stateDiagram-v2
     [*] --> SQL_Server
-    SQL_Server --> ADF[Managed_Identity]
-ADF[Managed_Identity] --> SQL_Server:Linked_Service
-    ADF[Managed_Identity] --> ADB:Linked_Service
+    SQL_Server --> ADF
+    ADF --> SQL_Server:Linked_Service
+    ADF --> ADB:Linked_Service
+    ADB --> Data_Lake:Linked_Service
     current_status --> cancel: status_available
     current_status --> [*]: status_over
     cancel --> [*]
