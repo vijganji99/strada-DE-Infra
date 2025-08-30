@@ -1,7 +1,8 @@
+# NOTE: I did not use LLM , as I did work on a similar request rcently for our Infrastructure at current Org, so basically have some idea over this question .
  # Azure Platform Side set up for STRADA team (using Azure Terraform)
-1. First step will be set up of Virtual Network
+
     	a. Creation of VNET & Subnets for Azure data Factory, Azure Data Bricks , Storage Account
-    	b. Creation of Resource Group
+    	b. Creation of Resource Group to host ADF, ADB, Storage Account for Data Lake, Azure Key vault
    		c. Creation of ADF
    		d. Creation of Storage account with Hirearchial Namespace = true (which is a important setting to use Data Lake for Azure Data Bricks)
    		e. Creation of Azure Data Bricks Service (uses 2 subnets for Public and Private exposure of ADB)
