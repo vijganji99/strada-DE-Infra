@@ -30,6 +30,16 @@ graph TD
     F --> B
 ```
 
+```mermaid
+stateDiagram-v2
+    [*] --> select_date
+    select_date --> select_time
+    select_time --> current_status
+    current_status --> cancel: status_available
+    current_status --> [*]: status_over
+    cancel --> [*]
+```
+
 
 ## Explanation of architecture and azure infra and the azure services connectivity
 
