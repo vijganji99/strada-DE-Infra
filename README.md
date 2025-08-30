@@ -2,7 +2,7 @@
 For STRADA team Azure Infra set up via Automation using Azure Terraform
 ```mermaid
 graph TD;
-    [Azure Data Bricks (access via Service Principal)]-->[Azure Storage Account (Data Lake)];
+    ADB-->ASADL;
     A-->C;
     B-->D;
     C-->D;
