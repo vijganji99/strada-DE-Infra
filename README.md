@@ -21,9 +21,6 @@ stateDiagram-v2
     ADF --> SQL_Server:Linked_Service[using_SQL_Credentials]
     ADF --> ADB:Linked_Service[using_Managed_Identity]
     ADB --> Data_Lake:Service_Principal
-    current_status --> cancel: status_available
-    current_status --> [*]: status_over
-    cancel --> [*]
 ```
 
 
