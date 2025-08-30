@@ -16,7 +16,7 @@ For STRADA team Azure Infra set up via Automation using Azure Terraform
 3. Azure Data Lake & Azure Data Bricks (For Preparing the data and Transforming the data for final loading & reporting)
 
 
-
+# High level Architecture diagram
 ```mermaid
 stateDiagram-v2
     [*] --> SQL_Server
