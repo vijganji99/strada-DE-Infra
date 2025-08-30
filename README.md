@@ -6,9 +6,13 @@
 
     	b. Creation of Resource Group to host ADF, ADB, Storage Account for Data Lake, Azure Key vault
    		c. Creation of ADF
-   		d. Creation of Storage account with Hirearchial Namespace = true (which is a important setting to use Data Lake for Azure Data Bricks)
+   		d. Creation of Storage account with Hirearchial Namespace = true (which is a important setting to use Data Lake for Azure Data Bricks). 
    		e. Creation of Azure Data Bricks Service (uses 2 subnets for Public and Private exposure of ADB)
    		d. Creation of Azure Key vault to store On-Prem SQL Server (login and password) .
+# RBAC
+1. Storage Account Blob Contributor for Service principal which helps Azure Data Bricks to communicate with Data Lake.
+
+     
 # strada-DE-Infra
 For STRADA team Azure Infra set up via Automation using Azure Terraform
 
