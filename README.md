@@ -17,7 +17,7 @@ For STRADA team Azure Infra set up via Automation using Azure Terraform
 stateDiagram-v2
     [*] --> SQL_Server
     SQL_Server --> ADF
-    SQL_Server_Creds --> Key_Vault 
+    SQL_Server --> Key_Vault:Credentials 
     ADF --> SQL_Server:Linked_Service
     ADF --> ADB:Linked_Service
     ADB --> Data_Lake:Service_Principal
