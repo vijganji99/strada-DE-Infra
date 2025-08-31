@@ -50,3 +50,12 @@ Basically , the whole architecture of this project as I assume:
 3. Azure Data Bricks is connected to Azure Data Lake via a Service Principal created at Entra ID and by granting necessary access to service principal for Azure storage account container( which is made as data lake by enabling the Hirearchial namespace option).
 4. During all this process we can use Azure Key Vault to store the Credentials from SQL Server or PAT function
 
+
+## Azure DevOps Pipeline trigger
+
+1. A new pipeline can be created using the tf_plan_apply.yml . Please opt for using existing option while creating new pipeline.
+2. When you try to run the pipeline as we have 3 distinct subsciprtions 'dev' , 'tst', 'prd' , the pipleine gives us options which environment to work with like shown in the below image.
+
+<img width="945" height="639" alt="image" src="https://github.com/user-attachments/assets/2931e5ca-496c-45d9-832f-4c09fee7076c" />
+
+
