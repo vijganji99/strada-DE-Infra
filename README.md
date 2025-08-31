@@ -18,7 +18,7 @@
 For STRADA team Azure Infra set up via Automation using Azure Terraform
 
 # Connectivity
-1. SQL Server ( Source for the data)
+1. SQL Server ( Source for the data) and we need Self hosted Integrated Runtime (IR) for moving the data from the On-premises to Cloud
 2. Azure Data Factory (Data Ingesion from SQL Server)
 3. Azure Data Lake & Azure Data Bricks (For Preparing the data and Transforming the data for final loading & reporting)
 
