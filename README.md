@@ -1,4 +1,4 @@
-### NOTE: I am not a full time Data Engineer . I did not use LLM instead relied on some data engineering blogs or videos which explained the high level architecture of data enginnering . Regarding the Azure terraform automation as I did work on a similar request rcently for our Infrastructure at current Org, so basically have some idea over this question .
+## NOTE: I am not a full time Data Engineer . I did not use LLM instead relied on some data engineering blogs or videos which explained the high level architecture of data enginnering . Regarding the Azure terraform automation as I did work on a similar request recently for our Infrastructure at current Org, so basically have some idea over this question .
  # Azure Platform Side set up for STRADA team (using Azure Terraform)
 
     	a. Creation of VNET & Subnets for Azure data Factory, Azure Data Bricks , Storage Account
