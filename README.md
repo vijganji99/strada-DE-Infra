@@ -52,6 +52,16 @@ Basically , the whole architecture of this project as I assume:
 3. Azure Data Bricks is connected to Azure Data Lake via a Service Principal created at Entra ID and by granting necessary access to service principal for Azure storage account container( which is made as data lake by enabling the Hirearchial namespace option).
 4. During all this process we can use Azure Key Vault to store the Credentials from SQL Server or PAT function
 
+## Azure Terraform Automation architecture for deployment of this project
+
+1. Create a resource group first
+2. Create a VNet as first resource ( as we need subnets for ADF, ADB etc....) and also we can attach Private endpoints, Private DNS Zones, NSGs for better security of data.
+3. Create ADB (uses 2 subnets used for Public & Private Communications)
+4. Create ADF (uses 1 subnet and a NSG as we have to allow communication to On-Prem SQL Server)
+5. Create a Azure Key vault for storing of SQL Login * Password. And also to store PAT in case we are using it for connection to ADB.
+6. Create a Azure Storage account and opt for the Hirearchial Namespace option for making it a Data Lake and further to connect it to Azure Data Bricks.
+   
+
 
 ## Azure DevOps Pipeline trigger
 
