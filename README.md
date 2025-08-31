@@ -17,10 +17,10 @@
 # strada-DE-Infra
 For STRADA team Azure Infra set up via Automation using Azure Terraform
 
-# Connectivity
+# Components & Connectivity
 1. SQL Server ( Source for the data) and we need Self hosted Integrated Runtime (IR) for moving the data from the On-premises to Cloud
 2. Azure Data Factory (Data Ingesion from SQL Server)
-3. Azure Data Lake & Azure Data Bricks (For Preparing the data and Transforming the data for final loading & reporting)
+3. Azure Data Lake (Data storage layer for Ingestion of raw data from On-Prem SQL Server) & Azure Data Bricks (For Preparing the data and Transforming the data for final loading & reporting)
 
 
 # High level Architecture diagram
