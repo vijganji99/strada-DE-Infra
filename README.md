@@ -28,6 +28,7 @@ For STRADA team Azure Infra set up via Automation using Azure Terraform
 stateDiagram-v2
     [*] --> SQL_Server
     SQL_Server --> ADF
+    SQL_Server --> ADF:Self_Hosted[Integration_Runtime]
     SQL_Server --> Key_Vault:Credentials 
     ADF --> SQL_Server:Linked_Service[using_SQL_Credentials]
     ADF --> ADB:Linked_Service[using_Managed_Identity]
