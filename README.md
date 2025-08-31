@@ -1,19 +1,6 @@
 ## NOTE: I am not a full time Data Engineer . I did not use LLM instead relied on some data engineering blogs or videos which explained the high level architecture of data enginnering . Regarding the Azure terraform automation as I did work on a similar request recently for our Infrastructure at current Org, so basically have some idea over this question .
- # Azure Platform Side set up for STRADA team (using Azure Terraform)
-
-    	a. Creation of VNET & Subnets for Azure data Factory, Azure Data Bricks , Storage Account
-      1. We can create Network security groups and Private Endpoints for security of the data and who can access the data. We can also use Private DNS Zone. As this security resources use private network instead of over the Internet, we are much secure over the Microsoft back bone network.
-
-    	b. Creation of Resource Group to host ADF, ADB, Storage Account for Data Lake, Azure Key vault
-   		c. Creation of ADF
-   		d. Creation of Storage account with Hirearchial Namespace = true (which is a important setting to use Data Lake for Azure Data Bricks). 
-   		e. Creation of Azure Data Bricks Service (uses 2 subnets for Public and Private exposure of ADB)
-   		d. Creation of Azure Key vault to store On-Prem SQL Server (login and password) .
-# RBAC
-1. Storage Account Blob Contributor for Service principal which helps Azure Data Bricks to communicate with Data Lake.
-2. Azure Data Factory to Azure Data Bricks communication grant contributor level access for communication.
-
-     
+ 
+    
 # strada-DE-Infra
 For STRADA team Azure Infra set up via Automation using Azure Terraform
 
@@ -60,6 +47,9 @@ Basically , the whole architecture of this project as I assume:
 4. Create ADF (uses 1 subnet and a NSG as we have to allow communication to On-Prem SQL Server)
 5. Create a Azure Key vault for storing of SQL Login * Password. And also to store PAT in case we are using it for connection to ADB.
 6. Create a Azure Storage account and opt for the Hirearchial Namespace option for making it a Data Lake and further to connect it to Azure Data Bricks.
+    # RBAC
+1. Storage Account Blob Contributor for Service principal which helps Azure Data Bricks to communicate with Data Lake.
+2. Azure Data Factory to Azure Data Bricks communication grant contributor level access for communication.
    
 
 
