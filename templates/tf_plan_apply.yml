@@ -84,12 +84,12 @@ stages :
         - task: CmdLine@2
           displayName: 'Setting Workspace - ${{ parameters.ENVIRONMENT }}'
           inputs:
-            workingDirectory: '$(System.DefaultWorkingDirectory)/App_Deployment/vlk-adb/${{ parameters.ENVIRONMENT }}'
+            workingDirectory: '$(System.DefaultWorkingDirectory)/strada_DE_Infra/${{ parameters.ENVIRONMENT }}'
             script: terraform workspace select ${{ parameters.ENVIRONMENT }} || terraform workspace new ${{ parameters.ENVIRONMENT }}
         - task: TerraformTaskV4@4
           displayName: 'Terraform Plan - ${{ parameters.ENVIRONMENT }}'
           inputs:
-            workingDirectory: '$(System.DefaultWorkingDirectory)/App_Deployment/vlk-adb/${{ parameters.ENVIRONMENT }}'
+            workingDirectory: '$(System.DefaultWorkingDirectory)/strada_DE_Infra/${{ parameters.ENVIRONMENT }}'
             provider: 'azurerm'
             command: 'plan'
             CommandOptions: "--out=${{ parameters.ENVIRONMENT }}-tfplan"
@@ -111,23 +111,23 @@ stages :
             ScriptType: 'InlineScript'
             Inline: 'terraform init -backend=false'
             azurePowerShellVersion: 'LatestVersion'
-            workingDirectory: '$(System.DefaultWorkingDirectory)/App_Deployment/vlk-adb/${{ parameters.ENVIRONMENT }}'
+            workingDirectory: '$(System.DefaultWorkingDirectory)/strada_DE_Infra/${{ parameters.ENVIRONMENT }}'
         - task: TerraformTaskV4@4
           displayName: 'Terraform Validate - ${{ parameters.ENVIRONMENT }}'
           inputs:
-            workingDirectory: '$(System.DefaultWorkingDirectory)/App_Deployment/vlk-adb/${{ parameters.ENVIRONMENT }}'
+            workingDirectory: '$(System.DefaultWorkingDirectory)/strada_DE_Infra/${{ parameters.ENVIRONMENT }}'
             provider: 'azurerm'
             command: 'validate'
 
         - task: CmdLine@2
           displayName: 'Setting Workspace - ${{ parameters.ENVIRONMENT }}'
           inputs:
-            workingDirectory: '$(System.DefaultWorkingDirectory)/App_Deployment/vlk-adb/${{ parameters.ENVIRONMENT }}'
+            workingDirectory: '$(System.DefaultWorkingDirectory)/strada_DE_Infra/${{ parameters.ENVIRONMENT }}'
             script: terraform workspace select ${{ parameters.ENVIRONMENT }} || terraform workspace new ${{ parameters.ENVIRONMENT }}
         - task: TerraformTaskV4@4
           displayName: 'Terraform Plan - ${{ parameters.ENVIRONMENT }}'
           inputs:
-            workingDirectory: '$(System.DefaultWorkingDirectory)/App_Deployment/vlk-adb/${{ parameters.ENVIRONMENT }}'
+            workingDirectory: '$(System.DefaultWorkingDirectory)/strada_DE_Infra/${{ parameters.ENVIRONMENT }}'
             provider: 'azurerm'
             command: 'plan'
             CommandOptions: "--out=${{ parameters.ENVIRONMENT }}-tfplan"
@@ -206,11 +206,11 @@ stages :
                 ScriptType: 'InlineScript'
                 Inline: 'terraform init -backend=false'
                 azurePowerShellVersion: 'LatestVersion'
-                workingDirectory: '$(System.DefaultWorkingDirectory)/App_Deployment/vlk-adb/${{ parameters.ENVIRONMENT }}'
+                workingDirectory: '$(System.DefaultWorkingDirectory)/strada_DE_Infra/${{ parameters.ENVIRONMENT }}'
             - task: TerraformTaskV4@4
               displayName: 'Terraform Plan - ${{ parameters.ENVIRONMENT }}'
               inputs:
-                workingDirectory: '$(System.DefaultWorkingDirectory)/App_Deployment/vlk-adb/${{ parameters.ENVIRONMENT }}'
+                workingDirectory: '$(System.DefaultWorkingDirectory)/strada_DE_Infra/${{ parameters.ENVIRONMENT }}'
                 provider: 'azurerm'
                 command: 'plan'
                 CommandOptions: "--out=${{ parameters.ENVIRONMENT }}-tfplan"
@@ -218,11 +218,11 @@ stages :
             - task: TerraformTaskV4@4
               displayName: 'Terraform Apply - ${{ parameters.ENVIRONMENT }}'
               inputs:
-               workingDirectory: '$(System.DefaultWorkingDirectory)/App_Deployment/vlk-adb/${{ parameters.ENVIRONMENT }}'
+               workingDirectory: '$(System.DefaultWorkingDirectory)/strada_DE_Infra/${{ parameters.ENVIRONMENT }}'
                provider: 'azurerm'
                command: 'apply'
                commandOptions: '-auto-approve'
-               environmentServiceNameAzureRM: 'Azure-Deployment-${{ parameters.ENVIRONMENT }}' #App_Deployment\web-app\ifte
+               environmentServiceNameAzureRM: 'Azure-Deployment-${{ parameters.ENVIRONMENT }}' 
 
     
 
