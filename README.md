@@ -11,6 +11,7 @@
    		d. Creation of Azure Key vault to store On-Prem SQL Server (login and password) .
 # RBAC
 1. Storage Account Blob Contributor for Service principal which helps Azure Data Bricks to communicate with Data Lake.
+2. Azure Data Factory to Azure Data Bricks communication grant contributor level access for communication.
 
      
 # strada-DE-Infra
